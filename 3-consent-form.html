@@ -8,9 +8,9 @@
      Google backend. Logs in the Sheet as "PDO Threads Consent".
 
      STRUCTURE: this form opens with the client details + goals,
-     then the STANDARD Layali medical-history block (sections 3–18,
+     then the STANDARD Layali medical-history block (sections 3–17,
      inserted verbatim from the framework), then the treatment-
-     specific PDO thread sections (19+).
+     specific PDO thread sections and the standard consent tail (18+).
 
      NOTE: thread migration/extrusion, infection, dimpling,
      asymmetry and nerve injury are the key thread-specific risks.
@@ -112,11 +112,11 @@ Layali Clinic
     </div>
 
     <!-- ============================================================
-         STANDARD LAYALI MEDICAL-HISTORY BLOCK (sections 3–18)
-         Inserted verbatim from the framework's canonical block
-         (originally numbered 2–17). Only the sec-n badges were
-         shifted +1 so numbering runs on from the two intake cards
-         above. Nothing else in the block was changed.
+         STANDARD LAYALI MEDICAL-HISTORY BLOCK (sections 3–17)
+         Inserted from the framework's canonical block. The sec-n
+         badges run on from the two intake cards above. The block's
+         own brief privacy-notice card was dropped as a duplicate —
+         the standard consent tail carries the full privacy card.
          ============================================================ -->
 
 <!-- ===== 3. CURRENT HEALTH ===== -->
@@ -731,18 +731,9 @@ Layali Clinic
   <div class="f"><label class="q">Please provide details</label><input type="text" name="Adjustments details"></div>
 </div>
 
-<!-- ===== 17. PRIVACY NOTICE ACKNOWLEDGEMENT ===== -->
+<!-- ===== 17. CLIENT MEDICAL-HISTORY DECLARATION ===== -->
 <div class="card">
-  <div class="sec-h"><span class="sec-n">17</span><h2 class="sec-t">Privacy notice acknowledgement</h2></div>
-  <div class="f" data-group><div class="opts" data-min="1" data-single>
-    <label class="opt"><input type="checkbox" name="Privacy acknowledgement" value="I have been given access to Layali Clinic's Privacy Notice and understand my personal and health information will be recorded, securely stored and used to assess and provide my care."><span>I have been given access to Layali Clinic's <a href="privacy.html" target="_blank">Privacy Notice</a> and understand my personal &amp; health information will be recorded, securely stored and used to assess and provide my care. <span class="req">*</span></span></label>
-  </div><div class="err-msg">Please confirm to continue.</div></div>
-  <div class="sec-d">This acknowledgement is separate from consent to any treatment and separate from permission to use photographs for marketing.</div>
-</div>
-
-<!-- ===== 18. CLIENT MEDICAL-HISTORY DECLARATION ===== -->
-<div class="card">
-  <div class="sec-h"><span class="sec-n">18</span><h2 class="sec-t">Your medical-history declaration</h2></div>
+  <div class="sec-h"><span class="sec-n">17</span><h2 class="sec-t">Your medical-history declaration</h2></div>
   <div class="f" data-group><label class="q">Please confirm every statement <span class="req">*</span></label>
     <div class="opts" data-all>
       <label class="opt"><input type="checkbox" name="Medical declaration" value="The medical, medication, allergy and personal-history information I have provided is true, accurate and complete to the best of my knowledge."><span>The information I have provided is true, accurate and complete to the best of my knowledge.</span></label>
@@ -757,11 +748,11 @@ Layali Clinic
 </div>
 <!-- ===== END STANDARD MEDICAL-HISTORY BLOCK — treatment-specific PDO sections follow ===== -->
 
-    <!-- ===== 19. Recent treatments (thread-specific) ===== -->
+    <!-- ===== 18. Recent treatments (thread-specific) ===== -->
     <!-- "Have you recently?" — mirrors the Jotform recent-treatments question. Recent Accutane, -->
     <!-- antibiotics or recent injectables/laser in the area can affect safety and timing. -->
     <div class="card">
-      <div class="sec-h"><span class="sec-n">19</span><h2 class="sec-t">Recent treatments</h2></div>
+      <div class="sec-h"><span class="sec-n">18</span><h2 class="sec-t">Recent treatments</h2></div>
       <div class="f" data-group><label class="q">Have you recently had any of the following? <span class="req">*</span><div class="hint">In roughly the last few weeks. If none, tick the last box.</div></label>
         <div class="opts grid-opts" data-min="1" data-none="None of the above">
           <label class="opt"><input type="checkbox" name="Recent treatments" value="Used Accutane / isotretinoin, topical medications or antibiotics"><span>Accutane, topical meds or antibiotics</span></label>
@@ -770,37 +761,75 @@ Layali Clinic
         </div><div class="err-msg">Please make a selection (tick the last box if none apply).</div></div>
     </div>
 
-    <!-- ===== 20. Expectations disclaimer ===== -->
+    <!-- ===== 19. Intended benefits ===== -->
+    <!-- What a PDO thread lift is realistically meant to achieve, and over what timescale. -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">20</span><h2 class="sec-t">What to expect — expectations</h2></div>
-      <p>A PDO thread lift is a <b>non-surgical</b> lifting and collagen-stimulating treatment. Please make sure you understand the following before you proceed:</p>
+      <div class="sec-h"><span class="sec-n">19</span><h2 class="sec-t">Intended benefits</h2></div>
+      <p>A PDO thread lift is a <b>non-surgical</b> treatment that works in two ways: absorbable threads <b>lift and reposition</b> sagging tissue immediately, and as they dissolve they <b>stimulate your own collagen</b> to firm and support the area over time. Please make sure you understand the following:</p>
       <ul>
-        <li>It is <b>not a surgical facelift</b> and will not achieve the same degree of lift — it suits mild to moderate laxity.</li>
-        <li>The threads are <b>fully absorbable</b> and dissolve over roughly 6 months; the lift and collagen last longer, typically around 9–18 months.</li>
-        <li>You'll usually see an <b>immediate lift</b>, but swelling can mask or exaggerate it at first — the true result appears once swelling settles (around 2 weeks).</li>
-        <li>Collagen-led firmness builds gradually over the following weeks.</li>
-        <li>More than one session, or a combination of thread types, may be recommended.</li>
-        <li><b>Results vary between individuals and are not guaranteed.</b> Maintenance is needed over time to keep the effect.</li>
+        <li>The aim is a <b>subtle, natural lift</b> and improved firmness. It <b>cannot replace a surgical facelift</b> and cannot correct significant skin laxity or heavy sagging.</li>
+        <li>It best suits <b>mild to moderate</b> laxity — the level of change is modest compared with surgery.</li>
+        <li>You will usually see an <b>immediate lift</b> on the day, and the collagen-led firmness <b>builds gradually over the following weeks</b>.</li>
+        <li>The final settled result is generally assessed at around <b>2–4 weeks</b>, once any swelling has resolved.</li>
+        <li>Results typically last around <b>9–18 months</b> and vary from person to person.</li>
+        <li>You may need a <b>repeat session</b> for your desired result, and <b>maintenance treatments</b> over time to keep the effect.</li>
+        <li><b>No specific result can be guaranteed.</b></li>
       </ul>
-      <!-- Alternatives to a thread lift — required for informed consent, mirrors the Jotform list. -->
-      <p style="margin-top:4px"><b>Alternative treatments.</b> I understand that alternatives to a PDO thread lift have been explained to me, including: a <b>surgical facelift</b>; laser (including full-face CO₂ laser); <b>dermal fillers</b>; muscle-relaxing injections (<b>Botox, Dysport, Xeomin</b>); chemical peels; or <b>choosing to have no treatment at all</b>.</p>
-      <div class="f" data-group><label class="q">Please confirm the following <span class="req">*</span></label>
-        <div class="opts" data-min="1" data-single>
-        <label class="opt"><input type="checkbox" name="Expectations disclaimer" value="I understand this is a non-surgical treatment, not a facelift; that threads dissolve; that results build and settle over weeks; that results vary and are not guaranteed."><span>I understand this is a <b>non-surgical treatment, not a facelift</b>; that the threads dissolve; that results settle over weeks; and that results vary and are <b>not guaranteed</b>.</span></label>
-      </div><div class="err-msg">Please confirm to continue.</div></div>
       <div class="f" data-group><div class="opts" data-min="1" data-single>
-        <label class="opt"><input type="checkbox" name="Alternatives acknowledgement" value="The alternative treatments (surgical facelift, laser, dermal fillers, muscle-relaxing injections, chemical peels, or no treatment) have been explained to me, and I choose to proceed with a PDO thread lift."><span>The <b>alternative treatments</b> (including no treatment) have been explained to me, and I choose to proceed with a PDO thread lift.</span></label>
+        <label class="opt"><input type="checkbox" name="Benefits understanding" value="I understand the intended benefits: an immediate lift plus gradual collagen firming that builds over weeks and is assessed at around 2-4 weeks; that it cannot replace a surgical facelift or correct significant laxity; that results last around 9-18 months, may need repeat and maintenance, and are not guaranteed."><span>I understand the <b>intended benefits</b> — an immediate lift plus gradual collagen firming assessed at around <b>2–4 weeks</b>; that it <b>cannot replace a surgical facelift</b> or fix significant laxity; that results last around <b>9–18 months</b>, may need repeat and maintenance, and are <b>not guaranteed</b>.</span></label>
       </div><div class="err-msg">Please confirm to continue.</div></div>
     </div>
 
-    <!-- ===== 21. Contraindications ===== -->
+    <!-- ===== 20. Limitations & realistic expectations ===== -->
+    <!-- data-all: every statement must be ticked, so the client actively confirms each limitation. -->
     <div class="card">
-      <div class="sec-h"><span class="sec-n">21</span><h2 class="sec-t">Contraindications</h2></div>
-      <div class="sec-d">These may restrict or prevent thread treatment, or require extra caution. Please tick any that apply.</div>
+      <div class="sec-h"><span class="sec-n">20</span><h2 class="sec-t">Limitations &amp; realistic expectations</h2></div>
+      <div class="f" data-group><label class="q">Please confirm you understand each of the following <span class="req">*</span></label>
+        <div class="opts" data-all>
+          <label class="opt"><input type="checkbox" name="Limitations" value="This is a non-surgical treatment and is not a facelift; it will not achieve the same degree of lift as surgery."><span>This is a <b>non-surgical treatment and is not a facelift</b>; it will not achieve the same degree of lift as surgery.</span></label>
+          <label class="opt"><input type="checkbox" name="Limitations" value="It cannot correct significant skin laxity, heavy jowls or advanced sagging."><span>It cannot correct <b>significant skin laxity</b>, heavy jowls or advanced sagging.</span></label>
+          <label class="opt"><input type="checkbox" name="Limitations" value="The degree of lift is modest and varies between individuals."><span>The degree of lift is <b>modest</b> and varies between individuals.</span></label>
+          <label class="opt"><input type="checkbox" name="Limitations" value="Swelling and bruising may mask or exaggerate the result at first."><span>Swelling and bruising may <b>mask or exaggerate</b> the result at first.</span></label>
+          <label class="opt"><input type="checkbox" name="Limitations" value="The final settled result is assessed at around 2-4 weeks, not on the day."><span>The final settled result is assessed at around <b>2–4 weeks</b>, not on the day.</span></label>
+          <label class="opt"><input type="checkbox" name="Limitations" value="The threads are fully absorbable; the lift and collagen effect are temporary and typically last around 9-18 months."><span>The threads are <b>fully absorbable</b>; the effect is temporary and typically lasts around <b>9–18 months</b>.</span></label>
+          <label class="opt"><input type="checkbox" name="Limitations" value="More than one session, or a combination of thread types, may be needed for my desired result."><span>More than one session, or a combination of thread types, <b>may be needed</b> for my desired result.</span></label>
+          <label class="opt"><input type="checkbox" name="Limitations" value="Maintenance treatments will be needed over time to preserve the effect."><span><b>Maintenance treatments</b> will be needed over time to preserve the effect.</span></label>
+          <label class="opt"><input type="checkbox" name="Limitations" value="Results vary from person to person and cannot be guaranteed."><span>Results <b>vary from person to person</b> and cannot be guaranteed.</span></label>
+          <label class="opt"><input type="checkbox" name="Limitations" value="Perfect symmetry cannot be guaranteed, as no two sides of the face are identical."><span>Perfect <b>symmetry cannot be guaranteed</b>, as no two sides of the face are identical.</span></label>
+        </div><div class="err-msg">Please confirm all statements to proceed.</div></div>
+    </div>
+
+    <!-- ===== 21. Alternatives ===== -->
+    <!-- Reasonable alternatives for informed consent, including doing nothing. -->
+    <div class="card prose">
+      <div class="sec-h"><span class="sec-n">21</span><h2 class="sec-t">Alternatives</h2></div>
+      <p>Reasonable alternatives to a PDO thread lift have been explained to me, including:</p>
+      <ul>
+        <li><b>No treatment</b> at all, and accepting the current appearance</li>
+        <li><b>Delaying</b> treatment to consider it further or seek more information</li>
+        <li><b>Dermal filler</b> to restore volume and support</li>
+        <li><b>HIFU</b> or <b>Titan X</b> (energy-based skin tightening)</li>
+        <li><b>Endolaser</b> (fibre-laser skin tightening)</li>
+        <li>A <b>surgical facelift</b> or neck lift for significant laxity</li>
+        <li><b>Skincare and lifestyle</b> measures (e.g. sun protection, not smoking, medical-grade skincare)</li>
+        <li>Referral to a <b>specialist</b> where appropriate</li>
+        <li>Seeking a <b>second opinion</b></li>
+      </ul>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Alternatives acknowledgement" value="The alternatives (no treatment; delaying; dermal filler; HIFU/Titan X; Endolaser; surgical facelift; skincare/lifestyle; specialist referral; second opinion) have been explained to me, and I choose to proceed with a PDO thread lift."><span>The <b>alternatives</b> (including <b>no treatment</b>) have been explained to me, and I choose to proceed with a PDO thread lift.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+    </div>
+
+    <!-- ===== 22. Contraindications & reasons to postpone ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">22</span><h2 class="sec-t">Contraindications &amp; reasons to postpone</h2></div>
+      <div class="sec-d">These may prevent thread treatment, require extra caution, or be a reason to postpone until they resolve. Please tick any that apply.</div>
       <div class="f" data-group><label class="q">Do you have any of the following? <span class="req">*</span></label>
         <div class="opts grid-opts" data-min="1" data-none="None of the above">
           <label class="opt"><input type="checkbox" name="Contraindications" value="Pregnancy or breastfeeding"><span>Pregnancy or breastfeeding</span></label>
           <label class="opt"><input type="checkbox" name="Contraindications" value="Active infection or skin condition in the treatment area"><span>Active infection / skin condition in the area</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Active cold sore or herpes outbreak"><span>Active cold sore / herpes outbreak</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Current illness, fever or feeling unwell"><span>Current illness, fever or unwell</span></label>
           <label class="opt"><input type="checkbox" name="Contraindications" value="Autoimmune or connective-tissue disease"><span>Autoimmune / connective-tissue disease</span></label>
           <label class="opt"><input type="checkbox" name="Contraindications" value="Keloid or poor scarring history"><span>Keloid / poor scarring history</span></label>
           <label class="opt"><input type="checkbox" name="Contraindications" value="Bleeding or clotting disorder"><span>Bleeding / clotting disorder</span></label>
@@ -811,11 +840,12 @@ Layali Clinic
           <label class="opt"><input type="checkbox" name="Contraindications" value="None of the above"><span>None of the above</span></label>
         </div><div class="err-msg">Please make a selection.</div></div>
       <div class="f"><label class="q">Any other medical details we should know?</label><textarea name="Other medical details"></textarea></div>
+      <div class="sec-d">Ticking any box above does not automatically mean you cannot be treated — your practitioner will assess each one with you and decide whether it is safe to proceed, to adapt the plan, or to postpone.</div>
     </div>
 
-    <!-- ===== 22. Health declaration ===== -->
+    <!-- ===== 23. Health declaration ===== -->
     <div class="card">
-      <div class="sec-h"><span class="sec-n">22</span><h2 class="sec-t">Health declaration</h2></div>
+      <div class="sec-h"><span class="sec-n">23</span><h2 class="sec-t">Health declaration</h2></div>
       <div class="f" data-group><label class="q">Please confirm all of the following <span class="req">*</span><div class="hint">If any of these do not apply to you, tell your practitioner before proceeding.</div></label>
         <div class="opts" data-all>
           <label class="opt"><input type="checkbox" name="Health declaration" value="I am not pregnant, trying to conceive, or breastfeeding."><span>I am not pregnant, trying to conceive, or breastfeeding.</span></label>
@@ -826,118 +856,192 @@ Layali Clinic
         </div><div class="err-msg">Please confirm all statements to proceed (or speak to your practitioner first).</div></div>
     </div>
 
-    <!-- ===== 23. Risks & complications ===== -->
+    <!-- ===== 24. Risks & complications (three groups) ===== -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">23</span><h2 class="sec-t">Risks &amp; complications</h2></div>
-      <p>No procedure is entirely risk-free. A PDO thread lift is minimally invasive, and the following risks may occur. There may also be unforeseen risks not listed here:</p>
+      <div class="sec-h"><span class="sec-n">24</span><h2 class="sec-t">Risks &amp; complications</h2></div>
+      <p>No procedure is entirely risk-free. A PDO thread lift is minimally invasive, and the following risks may occur, grouped by how often they happen. <b>Unforeseen risks may also occur that are not listed here.</b></p>
       <div class="cols">
-        <div class="mini ok"><h4>Common / temporary</h4><ul>
+        <div class="mini ok"><h4>Common</h4><ul>
           <li>Swelling, bruising &amp; redness</li><li>Tenderness &amp; soreness</li>
           <li>Tightness or a <b>pulling sensation</b> with movement</li>
           <li>Mild <b>dimpling or puckering</b> at entry points (usually settles)</li>
-          <li>Small bumps or firmness while healing</li><li>Temporary asymmetry from swelling</li></ul></div>
-        <div class="mini avoid"><h4>Less common / more serious</h4><ul>
-          <li><b>Thread migration or extrusion</b> — a thread moving, or a thread end working its way to the surface</li>
-          <li><b>Infection</b> — which may need antibiotics or thread removal</li>
+          <li>Small bumps or firmness while healing</li>
+          <li>Temporary asymmetry from swelling</li></ul></div>
+        <div class="mini avoid"><h4>Less common</h4><ul>
           <li>Persistent <b>dimpling, puckering or asymmetry</b></li>
+          <li><b>Thread migration or extrusion</b> — a thread moving, or a thread end working its way to the surface</li>
           <li>Visible or palpable threads under the skin</li>
-          <li><b>Nerve irritation or injury</b> — altered sensation, or (rarely) temporary muscle weakness</li>
-          <li>Granuloma (a firm inflammatory lump)</li>
+          <li>Granuloma — a firm inflammatory lump</li>
           <li>Prolonged pain or discomfort</li>
-          <li>Vascular injury (a thread affecting a blood vessel)</li>
           <li>Unsatisfactory result / need for further treatment or thread removal</li></ul></div>
+        <div class="mini avoid"><h4>Rare but serious</h4><ul>
+          <li><b>Infection</b> — which may need antibiotics or thread removal</li>
+          <li><b>Nerve injury</b> — altered sensation, or (rarely) temporary muscle weakness</li>
+          <li><b>Vascular injury</b> — a thread affecting a blood vessel</li>
+          <li>Significant or lasting scarring</li></ul></div>
       </div>
       <p>I understand the potential complications associated with a PDO thread lift and still wish to proceed.</p>
       <div class="f" data-group><div class="opts" data-min="1" data-single>
-        <label class="opt"><input type="checkbox" name="Risks acknowledgement" value="I have read, understood and accept all the risks, complications and side effects listed above, including thread migration/extrusion, infection, dimpling, asymmetry and nerve injury, and still wish to proceed."><span>I have read, understood and <b>accept all the risks</b> listed above — including <b>thread migration/extrusion, infection, dimpling, asymmetry and nerve injury</b> — and still wish to proceed.</span></label>
+        <label class="opt"><input type="checkbox" name="Risks acknowledgement" value="I have read, understood and accept all the risks, complications and side effects listed above, including thread migration/extrusion, dimpling, asymmetry, infection, nerve injury, granuloma and vascular injury, and that unforeseen risks may also occur, and still wish to proceed."><span>I have read, understood and <b>accept all the risks</b> listed above — including <b>thread migration/extrusion, dimpling, asymmetry, infection, nerve injury, granuloma and vascular injury</b> — and that <b>unforeseen risks may also occur</b>, and still wish to proceed.</span></label>
       </div><div class="err-msg">Please confirm to continue.</div></div>
     </div>
 
-    <!-- ===== 24. Infection & emergency warning ===== -->
-    <div class="card prose">
-      <div class="sec-h"><span class="sec-n">24</span><h2 class="sec-t">Infection &amp; emergency warning</h2></div>
-      <p>Although rare, infection, a thread working its way out (extrusion) or a vascular problem require <b>prompt attention</b>. Please contact us straight away if you notice:</p>
-      <div class="notice warn"><ul style="margin:0;padding-left:18px">
-        <li>A <b>thread poking through the skin</b> or a visible thread end</li>
-        <li>Spreading redness, heat, pus or discharge, or a fever</li>
-        <li>Severe or <b>worsening pain</b> rather than gradual improvement</li>
-        <li>Marked or new <b>asymmetry</b></li>
-        <li>Skin turning white, grey, blue or mottled, or unusually cold</li>
-        <li>Any breathing difficulty or feeling very unwell</li>
-      </ul></div>
-      <p>I understand that if any of these occur I must contact Layali Clinic <b>immediately</b> (07787&nbsp;708200), must <b>not</b> attempt to remove a thread myself, and, if severe or feeling seriously unwell, must call <b>999</b> / attend A&amp;E.</p>
-      <div class="f" data-group><div class="opts" data-min="1" data-single>
-        <label class="opt"><input type="checkbox" name="Emergency understanding" value="I understand the warning signs of infection, extrusion and vascular problems, that these need prompt attention, and what to do if they occur."><span>I understand these warning signs need <b>prompt attention</b> and what to do if they occur.</span></label>
-      </div><div class="err-msg">Please confirm to continue.</div></div>
-    </div>
+    <!-- ===== TAIL START — standard Layali treatment-consent tail (tokens replaced) ===== -->
 
-    <!-- ===== 25. Clinical photography consent ===== -->
-    <div class="card prose">
-      <div class="sec-h"><span class="sec-n">25</span><h2 class="sec-t">Clinical photography consent</h2></div>
-      <p>I authorise Layali Clinic to take clinical photographs for medical documentation and to assess my result. My identity will be protected in any scientific or educational use. Please choose one:</p>
-      <div class="f" data-group><label class="q">I consent to my photographs being used for: <span class="req">*</span></label>
-        <div class="opts" data-min="1" data-single>
-          <label class="opt"><input type="checkbox" name="Photography consent" value="Yes — internal medical records only"><span>Yes — internal <b>medical records only</b></span></label>
-          <label class="opt"><input type="checkbox" name="Photography consent" value="Yes — medical and marketing use (social media, website)"><span>Yes — medical <b>and marketing</b> use (social media, website)</span></label>
-        </div><div class="err-msg">Please choose one.</div></div>
-    </div>
+<!-- ===== 25. EMERGENCY WARNING SIGNS (highly visible) ===== -->
+<div class="card prose">
+  <div class="sec-h"><span class="sec-n">25</span><h2 class="sec-t">Emergency warning signs — act quickly</h2></div>
+  <div class="notice warn">
+    <h4>Contact Layali Clinic immediately on 07787&nbsp;708200 if you develop:</h4>
+    <ul style="margin:8px 0 0;padding-left:18px">
+      <li>Severe or rapidly increasing pain</li>
+      <li>White, grey, blue, purple or black skin</li>
+      <li>Blistering or skin breakdown</li>
+      <li>Rapidly increasing swelling</li>
+      <li>Spreading redness or heat</li>
+      <li>Pus or discharge</li>
+      <li>A thread poking through the skin, or a visible thread end</li>
+      <li>Fever or feeling severely unwell</li>
+    </ul>
+    <h4 style="margin-top:12px">Call 999 or go to A&amp;E immediately if you develop:</h4>
+    <ul style="margin:8px 0 0;padding-left:18px">
+      <li>Breathing or swallowing difficulty</li>
+      <li>Facial or throat swelling</li>
+      <li>Chest pain</li>
+      <li>Visual disturbance or loss of vision</li>
+      <li>Weakness, confusion, collapse or other neurological symptoms</li>
+    </ul>
+  </div>
+  <p><b>Acting quickly matters</b> — some complications are time-critical, so please do not wait. Do <b>not</b> attempt to remove a thread yourself. <b>Out of hours</b>, if you cannot reach the clinic, call <b>NHS&nbsp;111</b>, or <b>999</b>/attend A&amp;E for anything severe or rapidly worsening.</p>
+  <p><b>Tell any other healthcare professional</b> (A&amp;E, GP, 111) the treatment you had, the <b>product</b>, the <b>date</b> and the <b>injection/treatment site(s)</b>, and show them this consent so they can help you quickly.</p>
+  <div class="f" data-group><div class="opts" data-min="1" data-single>
+    <label class="opt"><input type="checkbox" name="Emergency understanding" value="I understand the emergency warning signs, that I must act quickly, that I must not remove a thread myself, how to contact the clinic and when to call 999 or attend A&E."><span>I understand the emergency warning signs, that I must act quickly, how to contact the clinic, and when to call 999 / attend A&amp;E.</span></label>
+  </div><div class="err-msg">Please confirm to continue.</div></div>
+</div>
 
-    <!-- ===== 26. Payment & cancellation ===== -->
-    <div class="card prose">
-      <div class="sec-h"><span class="sec-n">26</span><h2 class="sec-t">Payment &amp; cancellation policy</h2></div>
-      <ul>
-        <li>This is an elective procedure; full payment is required on the day of treatment.</li>
-        <li>A <b>non-refundable deposit</b> is required at booking to secure your appointment.</li>
-        <li>At least <b>48 hours' notice</b> is required to cancel or reschedule. Late cancellations or no-shows may result in loss of deposit or a rebooking fee.</li>
-        <li>Once treatment is administered, <b>no refunds</b> will be given, regardless of results.</li>
-        <li>Results vary from person to person and outcomes cannot be guaranteed.</li>
-      </ul>
-      <div class="f" data-group><div class="opts" data-min="1" data-single>
-        <label class="opt"><input type="checkbox" name="Payment agreement" value="I have read and agree to the payment & cancellation policy."><span>I have read and <b>agree to the payment &amp; cancellation policy</b>.</span></label>
-      </div><div class="err-msg">Please confirm to continue.</div></div>
-    </div>
+<!-- ===== 26. PRE-CARE ACKNOWLEDGEMENT ===== -->
+<div class="card">
+  <div class="sec-h"><span class="sec-n">26</span><h2 class="sec-t">Pre-care acknowledgement</h2></div>
+  <div class="f prose" style="margin-bottom:6px"><p>Pre-care document: <a href="https://husna3414-ui.github.io/layali-pdo-threads/4-pre-care-guide.html" target="_blank">Layali PDO Threads Pre-Care Guide</a> · Version 1.0 · provided before your appointment.</p></div>
+  <div class="f" data-group><label class="q">Please confirm <span class="req">*</span></label>
+    <div class="opts" data-all>
+      <label class="opt"><input type="checkbox" name="Pre-care acknowledgement" value="I received the correct pre-care guide for this treatment."><span>I received the correct pre-care guide for this treatment.</span></label>
+      <label class="opt"><input type="checkbox" name="Pre-care acknowledgement" value="I had sufficient time to read it."><span>I had sufficient time to read it.</span></label>
+      <label class="opt"><input type="checkbox" name="Pre-care acknowledgement" value="I understand what to avoid before treatment."><span>I understand what to avoid before treatment.</span></label>
+      <label class="opt"><input type="checkbox" name="Pre-care acknowledgement" value="I understand when to contact the clinic before attending."><span>I understand when to contact the clinic before attending.</span></label>
+      <label class="opt"><input type="checkbox" name="Pre-care acknowledgement" value="I understand treatment may be postponed if the pre-care instructions are not followed."><span>I understand treatment may be postponed if the pre-care instructions are not followed.</span></label>
+    </div><div class="err-msg">Please confirm all to proceed.</div></div>
+</div>
 
-    <!-- ===== 27. Final consent declaration ===== -->
-    <div class="card">
-      <div class="sec-h"><span class="sec-n">27</span><h2 class="sec-t">Final consent declaration</h2></div>
-      <div class="prose" style="margin-bottom:8px"><p>I give my voluntary and informed consent to undergo a PDO thread lift, administered by a qualified practitioner at Layali Clinic. Please confirm each statement:</p></div>
-      <div class="f" data-group><label class="q">Please confirm all of the following <span class="req">*</span></label>
-        <div class="opts" data-all>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I have read, understood and agree to the procedure, risks, benefits, alternatives and side effects."><span>I have read, understood and agree to the procedure, risks, benefits, alternatives and side effects.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I have read the Pre-Care guide and the Aftercare guide provided by the clinic."><span>I have <b>read the Pre-Care guide and the Aftercare guide</b> provided by the clinic.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I have had the opportunity to ask questions and have had them answered to my satisfaction."><span>I have had the opportunity to <b>ask questions</b> and have had them answered.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I understand results vary, are not guaranteed, that this is not a surgical facelift, and that maintenance may be needed."><span>I understand <b>results vary and are not guaranteed</b>, that this is not a surgical facelift, and that maintenance may be needed.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I have disclosed all relevant medical conditions, medications, allergies and previous procedures, and understand withholding information may increase risk."><span>I have disclosed all relevant medical information, and understand withholding it may increase risk.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I understand I may withdraw consent before treatment; once it begins, withdrawal may not be possible without completing the treatment."><span>I may withdraw consent before treatment; once it begins, withdrawal may not be possible without completing it.</span></label>
-          <!-- Clauses below carried over verbatim in substance from the Jotform consent statement. -->
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I understand I have the right to refuse or discontinue treatment at any time."><span>I understand I have the <b>right to refuse or discontinue treatment at any time</b>.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I understand I have not been given a warranty or guarantee of a specific result, and that complications or delays in recovery may occur, leading to additional treatment, delay to my normal daily activities and economic loss."><span>I have <b>not been given a warranty or guarantee</b> of a specific result, and understand complications or delayed recovery may lead to additional treatment, delay to my daily activities and <b>economic loss</b>.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I understand my practitioner may discover other conditions requiring additional or different procedures, and I authorise my practitioner and their associates, assistants and other healthcare providers to perform such procedures they judge advisable."><span>My practitioner may discover other conditions needing different procedures, and I authorise my practitioner and their assistants to <b>perform any procedures they judge advisable</b>.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I understand the threads/sutures may extrude, have to be trimmed or removed, that the result may relax over time, and that the desired improvement may not be fully achieved."><span>I understand the threads may <b>extrude, need trimming or removal</b>, that the result may relax over time, and the desired improvement may not be fully achieved.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I release the facility, medical staff and technicians from liability associated with this procedure, and understand this consent is binding on my spouse, relatives, legal representatives, heirs, administrators, successors and assignees."><span>I <b>release the facility, staff and technicians from liability</b> associated with this procedure, and understand this consent is binding on my spouse, relatives, legal representatives, <b>heirs, successors and assignees</b>.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I will follow all aftercare instructions, including limiting wide mouth movements and facial expressions, and will inform the clinic of any changes to my health."><span>I will <b>follow all aftercare instructions</b> (including limiting wide mouth movements) and inform the clinic of any changes to my health.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I understand and accept the clinic's non-refundable payment and cancellation policy."><span>I understand and accept the non-refundable payment &amp; cancellation policy.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="In a medical emergency, I authorise the clinic to take appropriate action and contact emergency services if necessary."><span>In an emergency, I authorise the clinic to take appropriate action and contact emergency services.</span></label>
-          <label class="opt"><input type="checkbox" name="Final declaration" value="I can read and understand English and give this consent freely without coercion."><span>I can read and understand English and give this consent freely.</span></label>
-        </div><div class="err-msg">Please confirm all statements to proceed.</div></div>
+<!-- ===== 27. AFTERCARE ACKNOWLEDGEMENT ===== -->
+<div class="card">
+  <div class="sec-h"><span class="sec-n">27</span><h2 class="sec-t">Aftercare acknowledgement</h2></div>
+  <div class="f prose" style="margin-bottom:6px"><p>Aftercare document: <a href="https://husna3414-ui.github.io/layali-pdo-threads/6-aftercare-guide.html" target="_blank">Layali PDO Threads Aftercare Guide</a> · Version 1.0 · to keep for after your treatment.</p></div>
+  <div class="f" data-group><label class="q">Please confirm <span class="req">*</span></label>
+    <div class="opts" data-all>
+      <label class="opt"><input type="checkbox" name="Aftercare acknowledgement" value="I received the correct aftercare guide for this treatment."><span>I received the correct aftercare guide for this treatment.</span></label>
+      <label class="opt"><input type="checkbox" name="Aftercare acknowledgement" value="I understand what is normal during healing."><span>I understand what is normal during healing.</span></label>
+      <label class="opt"><input type="checkbox" name="Aftercare acknowledgement" value="I understand the activity restrictions."><span>I understand the activity restrictions.</span></label>
+      <label class="opt"><input type="checkbox" name="Aftercare acknowledgement" value="I understand the warning signs to look for."><span>I understand the warning signs to look for.</span></label>
+      <label class="opt"><input type="checkbox" name="Aftercare acknowledgement" value="I know how and when to contact the clinic."><span>I know how and when to contact the clinic.</span></label>
+      <label class="opt"><input type="checkbox" name="Aftercare acknowledgement" value="I understand the follow-up / review requirements."><span>I understand the follow-up / review requirements.</span></label>
+    </div><div class="err-msg">Please confirm all to proceed.</div></div>
+</div>
 
-      <div class="f" data-group><div class="opts" data-min="1" data-single>
-        <label class="opt"><input type="checkbox" name="Data processing consent" value="I have read the Privacy Notice and consent to Layali Clinic processing my personal and health information to provide my care."><span>I have read the <a href="privacy.html" target="_blank">Privacy Notice</a> and consent to Layali Clinic processing my personal &amp; health information to provide my care.</span></label>
-      </div><div class="err-msg">Please confirm to continue.</div></div>
+<!-- ===== 28. CLINICAL PHOTOGRAPHY (two separate permissions) ===== -->
+<div class="card">
+  <div class="sec-h"><span class="sec-n">28</span><h2 class="sec-t">Clinical photography</h2></div>
+  <div class="f" data-group><label class="q">Clinical photographs — please confirm <span class="req">*</span></label>
+    <div class="opts" data-min="1" data-single>
+      <label class="opt"><input type="checkbox" name="Clinical photography consent" value="I consent to clinical photographs for my medical records, assessment, treatment planning, monitoring healing, managing complications and before-and-after comparison."><span>I consent to clinical photographs for my <b>medical records, assessment, treatment planning, monitoring healing, managing complications and before-and-after comparison</b>.</span></label>
+    </div><div class="err-msg">Please confirm to continue.</div></div>
+  <div class="f" data-group><label class="q">Marketing use — optional (not required to receive treatment) <span class="req">*</span></label>
+    <div class="opts" data-min="1" data-single>
+      <label class="opt"><input type="checkbox" name="Marketing photography consent" value="No marketing use"><span><b>No</b> marketing use</span></label>
+      <label class="opt"><input type="checkbox" name="Marketing photography consent" value="Anonymous educational use only"><span>Anonymous <b>educational</b> use only</span></label>
+      <label class="opt"><input type="checkbox" name="Marketing photography consent" value="Website (non-identifiable)"><span>Website — non-identifiable</span></label>
+      <label class="opt"><input type="checkbox" name="Marketing photography consent" value="Website and social media (non-identifiable)"><span>Website &amp; social media — non-identifiable</span></label>
+      <label class="opt"><input type="checkbox" name="Marketing photography consent" value="Website, social media and printed marketing (identifiable)"><span>Website, social media &amp; printed — identifiable</span></label>
+    </div><div class="err-msg">Please choose one.</div></div>
+  <div class="sec-d">Choosing “No marketing use” will not affect your treatment. You may withdraw marketing permission at any time.</div>
+</div>
 
-      <div class="f"><label class="q">Your full name (print) <span class="req">*</span></label><input type="text" name="Printed name" required></div>
+<!-- ===== 29. PRIVACY NOTICE ACKNOWLEDGEMENT (separate from treatment consent) ===== -->
+<div class="card">
+  <div class="sec-h"><span class="sec-n">29</span><h2 class="sec-t">Privacy notice acknowledgement</h2></div>
+  <div class="f" data-group><div class="opts" data-min="1" data-single>
+    <label class="opt"><input type="checkbox" name="Privacy notice acknowledgement" value="I have received and understood Layali Clinic's Privacy Notice."><span>I have received and understood Layali Clinic's <a href="privacy.html" target="_blank">Privacy Notice</a>, covering what information is collected and why, how it is used, the lawful basis, how my health information is handled, storage and retention, any information sharing, my data-protection rights, and how to raise a concern. <span class="req">*</span></span></label>
+  </div><div class="err-msg">Please confirm to continue.</div></div>
+  <div class="sec-d">This acknowledgement is separate from consent to treatment and separate from marketing permission.</div>
+</div>
+
+<!-- ===== 30. PAYMENT & CANCELLATION (administratively separate) ===== -->
+<div class="card prose">
+  <div class="sec-h"><span class="sec-n">30</span><h2 class="sec-t">Payment &amp; cancellation</h2></div>
+  <ul>
+    <li>The treatment price / agreed quotation and any deposit are confirmed with you before treatment.</li>
+    <li>A deposit may be required to secure your appointment.</li>
+    <li>Please give the agreed notice to cancel or reschedule; late cancellation or non-attendance may result in loss of deposit or a charge.</li>
+    <li>Additional sessions, elective corrections or top-ups have an additional cost.</li>
+    <li>Once treatment is administered, no refunds are given, regardless of results.</li>
+    <li>Management of a genuine complication is handled separately and will be discussed with you.</li>
+    <li>This is an elective treatment; payment is due as agreed.</li>
+  </ul>
+  <div class="row">
+    <div class="f"><label class="q">Agreed price / quotation</label><input type="text" name="Agreed price"></div>
+    <div class="f"><label class="q">Deposit paid (if any)</label><input type="text" name="Deposit paid"></div>
+  </div>
+  <div class="f" data-group><div class="opts" data-min="1" data-single>
+    <label class="opt"><input type="checkbox" name="Payment acknowledgement" value="I have read and agree to the payment and cancellation terms. I understand these terms are administrative and do not affect my right to withhold or withdraw clinical consent at any time."><span>I have read and agree to the payment &amp; cancellation terms. I understand these are administrative and <b>do not affect my right to withhold or withdraw clinical consent at any time</b>.</span></label>
+  </div><div class="err-msg">Please confirm to continue.</div></div>
+</div>
+
+<!-- ===== 31. FINAL CLIENT DECLARATION ===== -->
+<div class="card">
+  <div class="sec-h"><span class="sec-n">31</span><h2 class="sec-t">Final consent declaration</h2></div>
+  <div class="f prose" style="margin-bottom:6px"><p>This document supports, but does not replace, your consultation. Please ask about anything you do not understand. Signing confirms that the proposed treatment, alternatives, limitations and risks have been discussed with you and that you voluntarily consent to the agreed treatment plan.</p></div>
+  <div class="f" data-group><label class="q">Please confirm every statement <span class="req">*</span></label>
+    <div class="opts" data-all>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="The treatment has been explained to me."><span>The treatment has been explained to me.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I understand its purpose and limitations."><span>I understand its purpose and limitations.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I understand the expected benefits."><span>I understand the expected benefits.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I understand the risks and complications."><span>I understand the risks and complications.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I understand the reasonable alternatives, including no treatment."><span>I understand the reasonable alternatives, including no treatment.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I understand results cannot be guaranteed, that this is not a surgical facelift, and that maintenance may be needed."><span>I understand results cannot be guaranteed, that this is <b>not a surgical facelift</b>, and that maintenance may be needed.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I have disclosed my medical history, medication and allergies."><span>I have disclosed my medical history, medication and allergies.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I have received the pre-care and aftercare information."><span>I have received the pre-care and aftercare information.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I know the emergency warning signs."><span>I know the emergency warning signs.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I had the opportunity to ask questions and my questions were answered."><span>I had the opportunity to ask questions and my questions were answered.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I have had sufficient time to decide."><span>I have had sufficient time to decide.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I am choosing this treatment voluntarily and free of coercion."><span>I am choosing this treatment voluntarily and free of coercion.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I understand I have the right to refuse or discontinue treatment, and may withdraw consent at any time, including during treatment, and the practitioner will stop as soon as it is clinically safe to do so."><span>I understand I have the <b>right to refuse or discontinue treatment</b>, and may withdraw consent at any time, including during treatment, and the practitioner will stop as soon as it is clinically safe.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I will report any change in my health, medication, allergies or pregnancy status before treatment."><span>I will report any change in my health, medication, allergies or pregnancy status before treatment.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I have not been given a warranty or guarantee of a specific result, and understand complications or delayed recovery may lead to additional treatment, delay to my daily activities and economic loss."><span>I have <b>not been given a warranty or guarantee</b> of a specific result, and understand complications or delayed recovery may lead to additional treatment, delay to my daily activities and <b>economic loss</b>.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I understand my practitioner may discover other conditions requiring additional or different procedures, and I authorise my practitioner and their associates and assistants to perform such procedures they judge advisable."><span>My practitioner may discover other conditions needing different procedures, and I authorise my practitioner and their assistants to <b>perform any procedures they judge advisable</b>.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I understand the threads may extrude, need trimming or removal, that the result may relax over time, and the desired improvement may not be fully achieved."><span>I understand the threads may <b>extrude, need trimming or removal</b>, that the result may relax over time, and the desired improvement may not be fully achieved.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I release the facility, medical staff and technicians from liability associated with this procedure, and understand this consent is binding on my spouse, relatives, legal representatives, heirs, administrators, successors and assignees."><span>I <b>release the facility, staff and technicians from liability</b> associated with this procedure, and understand this consent is binding on my spouse, relatives, legal representatives, <b>heirs, successors and assignees</b>.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I will follow all aftercare instructions, including limiting wide mouth movements and facial expressions, and will inform the clinic of any changes to my health."><span>I will <b>follow all aftercare instructions</b> (including limiting wide mouth movements) and inform the clinic of any changes to my health.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="In a medical emergency, I authorise the clinic to take appropriate action and contact emergency services if necessary."><span>In an emergency, I authorise the clinic to take appropriate action and contact emergency services.</span></label>
+      <label class="opt"><input type="checkbox" name="Final declaration" value="I voluntarily consent to the agreed PDO Threads treatment plan."><span>I voluntarily consent to the agreed PDO Threads treatment plan.</span></label>
+    </div><div class="err-msg">Please confirm all statements to proceed.</div></div>
+
+  <div class="f" data-group><div class="opts" data-min="1" data-single>
+    <label class="opt"><input type="checkbox" name="Data processing consent" value="I have read the Privacy Notice and consent to Layali Clinic processing my personal and health information to provide my care."><span>I have read the <a href="privacy.html" target="_blank">Privacy Notice</a> and consent to Layali Clinic processing my personal &amp; health information to provide my care.</span></label>
+  </div><div class="err-msg">Please confirm to continue.</div></div>
+
+  <div class="f"><label class="q">Your full name (print) <span class="req">*</span></label><input type="text" name="Printed name" required></div>
       <div class="f" data-group id="sigField"><label class="q">Your signature <span class="req">*</span><div class="hint">Sign with your finger or mouse.</div></label>
         <div class="sigwrap"><canvas class="sig"></canvas><div class="sig-base"></div><button type="button" class="sig-clear" id="sigClear">Clear</button></div>
         <div class="err-msg">Please add your signature.</div></div>
       <div class="f"><label class="q">Date <span class="req">*</span></label><input type="date" name="Date signed" required></div>
     </div>
 
-    <!-- ===== 28. Practitioner attestation ===== -->
+    <!-- ===== 32. Practitioner attestation ===== -->
     <!-- Clinician-completed block (carried over from the Jotform). The shared engine wires up a -->
     <!-- single drawn signature (the client's, above), so the practitioner attests using printed -->
     <!-- name + date fields here; these are captured in the signed PDF like every other field. -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">28</span><h2 class="sec-t">Practitioner attestation</h2></div>
+      <div class="sec-h"><span class="sec-n">32</span><h2 class="sec-t">Practitioner attestation</h2></div>
       <p>To be completed by your practitioner at Layali Clinic:</p>
       <p>I am the treating healthcare professional. I discussed the risks, benefits and alternatives above with the patient. The patient had the opportunity to have all questions answered and was offered a copy of this informed consent, and has been told to contact the clinic with any questions or concerns after treatment.</p>
       <div class="row">
