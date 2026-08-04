@@ -118,8 +118,14 @@ Layali Clinic
         <li>More than one session, or a combination of thread types, may be recommended.</li>
         <li><b>Results vary between individuals and are not guaranteed.</b> Maintenance is needed over time to keep the effect.</li>
       </ul>
-      <div class="f" data-group><div class="opts" data-min="1" data-single>
+      <!-- Alternatives to a thread lift — required for informed consent, mirrors the Jotform list. -->
+      <p style="margin-top:4px"><b>Alternative treatments.</b> I understand that alternatives to a PDO thread lift have been explained to me, including: a <b>surgical facelift</b>; laser (including full-face CO₂ laser); <b>dermal fillers</b>; muscle-relaxing injections (<b>Botox, Dysport, Xeomin</b>); chemical peels; or <b>choosing to have no treatment at all</b>.</p>
+      <div class="f" data-group><label class="q">Please confirm the following <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single>
         <label class="opt"><input type="checkbox" name="Expectations disclaimer" value="I understand this is a non-surgical treatment, not a facelift; that threads dissolve; that results build and settle over weeks; that results vary and are not guaranteed."><span>I understand this is a <b>non-surgical treatment, not a facelift</b>; that the threads dissolve; that results settle over weeks; and that results vary and are <b>not guaranteed</b>.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Alternatives acknowledgement" value="The alternative treatments (surgical facelift, laser, dermal fillers, muscle-relaxing injections, chemical peels, or no treatment) have been explained to me, and I choose to proceed with a PDO thread lift."><span>The <b>alternative treatments</b> (including no treatment) have been explained to me, and I choose to proceed with a PDO thread lift.</span></label>
       </div><div class="err-msg">Please confirm to continue.</div></div>
     </div>
 
@@ -144,6 +150,13 @@ Layali Clinic
           <label class="opt"><input type="checkbox" name="Medical conditions" value="Hepatitis"><span>Hepatitis</span></label>
           <label class="opt"><input type="checkbox" name="Medical conditions" value="Any active infection"><span>Any active infection</span></label>
           <label class="opt"><input type="checkbox" name="Medical conditions" value="Mental health condition"><span>Mental health condition</span></label>
+          <!-- Items below added to match the clinic's Jotform medical-history checklist verbatim. -->
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Acute respiratory viral infection (e.g. current cold/flu)"><span>Acute respiratory viral infection (cold / flu)</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Any chronic disease in its acute phase"><span>Chronic disease in an acute phase</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Currently menstruating (within the past week)"><span>Menstruating (within the past week)</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Polyvalent allergy (allergic to many substances)"><span>Polyvalent allergy (allergic to many things)</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previously introduced non-biodegradable / permanent injectables or implants in the treatment area"><span>Permanent filler or implant in the area</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Other contraindication identified by my doctor"><span>Other contraindication per my doctor</span></label>
           <label class="opt"><input type="checkbox" name="Medical conditions" value="None of the above"><span>None of the above</span></label>
         </div><div class="err-msg">Please make a selection (tick the last box if none apply).</div></div>
 
@@ -193,6 +206,15 @@ Layali Clinic
           <label class="opt"><input type="checkbox" name="Medications" value="None of the above"><span>None of the above</span></label>
         </div><div class="err-msg">Please make a selection.</div></div>
       <div class="f"><label class="q">Please list any other medications or supplements you take</label><textarea name="Other medications"></textarea></div>
+
+      <!-- "Have you recently?" — mirrors the Jotform recent-treatments question. Recent Accutane, -->
+      <!-- antibiotics or recent injectables/laser in the area can affect safety and timing. -->
+      <div class="f" data-group><label class="q">Have you recently had any of the following? <span class="req">*</span><div class="hint">In roughly the last few weeks. If none, tick the last box.</div></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <label class="opt"><input type="checkbox" name="Recent treatments" value="Used Accutane / isotretinoin, topical medications or antibiotics"><span>Accutane, topical meds or antibiotics</span></label>
+          <label class="opt"><input type="checkbox" name="Recent treatments" value="Had aesthetic fillers, injectables or laser treatments"><span>Fillers, injectables or laser treatments</span></label>
+          <label class="opt"><input type="checkbox" name="Recent treatments" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection (tick the last box if none apply).</div></div>
     </div>
 
     <!-- ===== 7. Contraindications ===== -->
@@ -223,7 +245,9 @@ Layali Clinic
           <label class="opt"><input type="checkbox" name="Health declaration" value="I am not pregnant, trying to conceive, or breastfeeding."><span>I am not pregnant, trying to conceive, or breastfeeding.</span></label>
           <label class="opt"><input type="checkbox" name="Health declaration" value="I do not have an active infection, cold sore or broken skin in the treatment area."><span>I do not have an active infection, cold sore or broken skin in the treatment area.</span></label>
           <label class="opt"><input type="checkbox" name="Health declaration" value="I have disclosed all relevant medical conditions, medications and allergies."><span>I have disclosed all relevant medical conditions, medications and allergies.</span></label>
-        </div><div class="err-msg">Please confirm all three to proceed (or speak to your practitioner first).</div></div>
+          <!-- Lidocaine / multiple-allergy certification — carried over from the Jotform declarations. -->
+          <label class="opt"><input type="checkbox" name="Health declaration" value="I certify that I do not have multiple allergies or high sensitivity to medications, including but not limited to Lidocaine."><span>I certify I do <b>not</b> have multiple allergies or high sensitivity to medications, including but not limited to <b>Lidocaine</b>.</span></label>
+        </div><div class="err-msg">Please confirm all statements to proceed (or speak to your practitioner first).</div></div>
     </div>
 
     <!-- ===== 9. Risks & complications ===== -->
@@ -309,6 +333,12 @@ Layali Clinic
           <label class="opt"><input type="checkbox" name="Final declaration" value="I understand results vary, are not guaranteed, that this is not a surgical facelift, and that maintenance may be needed."><span>I understand <b>results vary and are not guaranteed</b>, that this is not a surgical facelift, and that maintenance may be needed.</span></label>
           <label class="opt"><input type="checkbox" name="Final declaration" value="I have disclosed all relevant medical conditions, medications, allergies and previous procedures, and understand withholding information may increase risk."><span>I have disclosed all relevant medical information, and understand withholding it may increase risk.</span></label>
           <label class="opt"><input type="checkbox" name="Final declaration" value="I understand I may withdraw consent before treatment; once it begins, withdrawal may not be possible without completing the treatment."><span>I may withdraw consent before treatment; once it begins, withdrawal may not be possible without completing it.</span></label>
+          <!-- Clauses below carried over verbatim in substance from the Jotform consent statement. -->
+          <label class="opt"><input type="checkbox" name="Final declaration" value="I understand I have the right to refuse or discontinue treatment at any time."><span>I understand I have the <b>right to refuse or discontinue treatment at any time</b>.</span></label>
+          <label class="opt"><input type="checkbox" name="Final declaration" value="I understand I have not been given a warranty or guarantee of a specific result, and that complications or delays in recovery may occur, leading to additional treatment, delay to my normal daily activities and economic loss."><span>I have <b>not been given a warranty or guarantee</b> of a specific result, and understand complications or delayed recovery may lead to additional treatment, delay to my daily activities and <b>economic loss</b>.</span></label>
+          <label class="opt"><input type="checkbox" name="Final declaration" value="I understand my practitioner may discover other conditions requiring additional or different procedures, and I authorise my practitioner and their associates, assistants and other healthcare providers to perform such procedures they judge advisable."><span>My practitioner may discover other conditions needing different procedures, and I authorise my practitioner and their assistants to <b>perform any procedures they judge advisable</b>.</span></label>
+          <label class="opt"><input type="checkbox" name="Final declaration" value="I understand the threads/sutures may extrude, have to be trimmed or removed, that the result may relax over time, and that the desired improvement may not be fully achieved."><span>I understand the threads may <b>extrude, need trimming or removal</b>, that the result may relax over time, and the desired improvement may not be fully achieved.</span></label>
+          <label class="opt"><input type="checkbox" name="Final declaration" value="I release the facility, medical staff and technicians from liability associated with this procedure, and understand this consent is binding on my spouse, relatives, legal representatives, heirs, administrators, successors and assignees."><span>I <b>release the facility, staff and technicians from liability</b> associated with this procedure, and understand this consent is binding on my spouse, relatives, legal representatives, <b>heirs, successors and assignees</b>.</span></label>
           <label class="opt"><input type="checkbox" name="Final declaration" value="I will follow all aftercare instructions, including limiting wide mouth movements and facial expressions, and will inform the clinic of any changes to my health."><span>I will <b>follow all aftercare instructions</b> (including limiting wide mouth movements) and inform the clinic of any changes to my health.</span></label>
           <label class="opt"><input type="checkbox" name="Final declaration" value="I understand and accept the clinic's non-refundable payment and cancellation policy."><span>I understand and accept the non-refundable payment &amp; cancellation policy.</span></label>
           <label class="opt"><input type="checkbox" name="Final declaration" value="In a medical emergency, I authorise the clinic to take appropriate action and contact emergency services if necessary."><span>In an emergency, I authorise the clinic to take appropriate action and contact emergency services.</span></label>
@@ -324,6 +354,21 @@ Layali Clinic
         <div class="sigwrap"><canvas class="sig"></canvas><div class="sig-base"></div><button type="button" class="sig-clear" id="sigClear">Clear</button></div>
         <div class="err-msg">Please add your signature.</div></div>
       <div class="f"><label class="q">Date <span class="req">*</span></label><input type="date" name="Date signed" required></div>
+    </div>
+
+    <!-- ===== 14. Practitioner attestation ===== -->
+    <!-- Clinician-completed block (carried over from the Jotform). The shared engine wires up a -->
+    <!-- single drawn signature (the client's, above), so the practitioner attests using printed -->
+    <!-- name + date fields here; these are captured in the signed PDF like every other field. -->
+    <div class="card prose">
+      <div class="sec-h"><span class="sec-n">14</span><h2 class="sec-t">Practitioner attestation</h2></div>
+      <p>To be completed by your practitioner at Layali Clinic:</p>
+      <p>I am the treating healthcare professional. I discussed the risks, benefits and alternatives above with the patient. The patient had the opportunity to have all questions answered and was offered a copy of this informed consent, and has been told to contact the clinic with any questions or concerns after treatment.</p>
+      <div class="row">
+        <div class="f"><label class="q">Practitioner name (print)</label><input type="text" name="Practitioner name"></div>
+        <div class="f"><label class="q">Practitioner signature / initials</label><input type="text" name="Practitioner signature"></div>
+      </div>
+      <div class="f"><label class="q">Date</label><input type="date" name="Practitioner date signed"></div>
     </div>
 
     <button type="submit" class="submit">Submit my consent</button>
